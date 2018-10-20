@@ -1,0 +1,120 @@
+//// FILTERED CONTENT
+/// Requires the Filtered Content K2 Category and Items override
+/// Allows for items with video and standard click throughs
+
+.filtered-page {
+	&__categories-filter {
+		margin-bottom: $padding-v-m;
+	}
+	&__list-item {
+		margin-bottom: $padding-v-s;
+	}
+	&__item {
+		&-image {
+			background-position: center center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			margin-bottom: 15px;
+			position: relative;
+			padding-bottom: 56%;	
+			&.filter-video {
+				a {
+					position: absolute;
+					height: 100%;
+					width: 100%;
+					top: 0;
+					left: 0;
+					display: flex;
+					.filtered-page__item-image_inner {
+						align-items: center;
+						background-color: rgba($brand-primary, 0.5);
+						display: flex;
+						justify-content: center;
+						transition: 0.3s ease all;
+						width: 100%;
+						.logo-brand-primary {
+							fill: $white;
+							transform: scale(0.7);
+							transform-origin: center;
+							transition: 0.6s ease all;
+						}
+					}
+					&:hover {
+						text-decoration: none;
+						.filtered-page__item-image_inner {
+							background-color: rgba($brand-secondary, 0.8);
+							.logo-brand-primary {
+								fill: $white;
+								transform: scale(1);
+								text-decoration: none;
+							}
+						}
+					}
+				}
+			}
+			&.filter-image {
+				a {
+					position: absolute;
+					height: 100%;
+					width: 100%;
+					top: 0;
+					left: 0;
+					display: flex;
+					.filtered-page__item-image_inner {
+						align-items: center;
+						background-color: rgba($brand-primary, 0.5);
+						display: flex;
+						justify-content: center;
+						transition: 0.3s ease all;
+						width: 100%;
+						span.read-more {
+							border: 1px solid $white;
+							color: $white;
+							padding: 8px 16px;
+							text-decoration: none;
+							transform: scale(0.7);
+							transform-origin: center;
+							transition: 0.6s ease all;
+						}
+						.filtered-page__item-title h3 {
+							margin-top: 1em;
+						}
+					}
+					&:hover {
+						text-decoration: none;
+						.filtered-page__item-image_inner {
+							background-color: rgba($brand-secondary, 0.8);
+							span.read-more {
+								border: 1px solid $white;
+								color: $white;
+								transform: scale(1);
+								text-decoration: none;
+							}
+						}
+					}
+				}
+			}
+			svg {
+			    width: 25%;
+			}
+			&_inner {
+				flex-direction: column;
+			}
+		}
+		&-title {
+			h3 {
+				color: $white;
+				@include rem(font-size, 18);
+				margin: 0.2em 0 0.5em;
+				text-shadow: 1px 1px 3px $background-dark;
+			}
+			h5 {
+				color: $white;
+				@include rem(font-size, 14);
+				margin: 0.2em 0 0;
+				text-shadow: 1px 1px 3px $background-dark;
+				text-transform: uppercase;
+			}
+		}	
+	}
+}
