@@ -37,11 +37,9 @@ if (!JFolder::exists($diretorio)) {
 
 $myFile = $diretorio . '/kiss-modules/_kiss-colours-params.scss';
 
-$brandPrimary = '$brand-primary: ' . $params->get('primarycolor') . ';';
-JFile::write($myFile, $brandPrimary);
-
-$brandSecondary = '$brand-secondary: ' . $params->get('primarysecondary') . ';';
-JFile::write($myFile, $brandSecondary);
+$stringData = '$brand-primary: ' . $params->get('primarycolor') . ';';
+$stringData .= '$brand-secondary: ' . $params->get('secondarycolor') . ';';
+JFile::write($myFile, $stringData);
 
 $scss = new FileCompiler($cacheFolder);
 try
