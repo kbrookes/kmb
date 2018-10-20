@@ -1,0 +1,45 @@
+//// FOR DISPLAYING SIMPLE PRODUCT/SERVICE BLOCK MENUS
+.service-block {
+	&__item {
+		background-color: $brand-primary;
+		overflow: hidden;
+		&-inner {
+			padding: $padding-v-l 0;
+		}
+		&:nth-child(even) {
+			background-color: $brand-secondary;
+		}
+		a {
+			color: $white;
+				.service-block__item-inner {
+					transform: scale(1);
+					transition: 0.3s ease all;
+				}
+			&:hover {
+				text-decoration: none;
+				.service-block__item-inner {
+					transform: scale(1.4);
+				}
+			}
+		}
+		h3 {
+			font-weight: 600;
+			line-height: 1.3em;
+			text-transform: uppercase;
+		}
+		.read-more {
+			@include button-outline-variant($white, $light, $background-dark, $white);
+		}
+	}
+	.no-gutters & {
+		.row {
+			margin-left: 0;
+			margin-right: 0;
+				> .col,
+				> [class*="col-"] {
+					padding-right: 0;
+					padding-left: 0;
+				}
+		}
+	}
+}

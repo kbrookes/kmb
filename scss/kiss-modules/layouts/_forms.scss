@@ -1,0 +1,54 @@
+//// FORM LAYOUTS
+.form-group {
+	label.control-label {
+		color: $brand-primary;
+		font-weight: 500;
+		.formRequired {
+			color: $brand-red;
+		}
+	}
+	&.rsform-block-antispam {
+		label.control-label {
+			display: none;
+		}
+	}
+}
+
+
+//// Newsletter Subscription Form
+/// Requires first, last names, email and button field in a 4-col layout
+#subscribeForm { /// Make sure you set the form ID to this for it to work
+	h2 {
+		.bg-background__dark & {
+			color: $brand-primary;
+			text-align: center;
+			margin: 0;
+		}
+		.bg-primary & {
+			color: $white;
+			text-align: center;
+			margin: 0 0 $padding-v-m;
+		}
+	}
+	.form-control {
+		border: none;
+		padding: 13px;
+	}
+	.rsform-block-submit {
+		button.rsform-submit-button {
+			padding: 12px 32px;
+		}
+	}
+	p {
+		line-height: 1em;
+		small {
+			color: rgba($background-light, 0.7);
+			@include rem(font-size, 11);
+		}
+	}
+	.bg-primary & {
+		label {
+			color: $white;
+		}
+	}
+}

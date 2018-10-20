@@ -1,0 +1,30 @@
+////// RESUME LIST
+.resume-list {
+	&__item {
+		&-header {
+			h3 {
+				border-bottom: 1px solid $brand-primary;
+				font-weight: 600;
+				@include rem(font-size, 22);
+			}
+		}
+	}
+	&__items {
+		padding-bottom: $padding-v-s;
+		&-single {
+			margin-bottom: 0.7em;
+			h6 {
+				color: $brand-primary;
+				@include rem(font-size, 16);
+				font-weight: 600;
+				margin: 0;
+			}
+			&_info {
+				line-height: 1.2em;
+				.location {
+					font-style: oblique;
+				}
+			}
+		}
+	}
+}

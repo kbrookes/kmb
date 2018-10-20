@@ -1,0 +1,21 @@
+//////// SIDEBARS
+.sidebar {
+	///BOXED
+	&-boxed {
+		padding: 15px;
+		&__primary {
+			background-color: $brand-primary;
+			.form-group {
+				label {
+					color: $white;
+				}
+				.form-check {
+					margin-bottom: 0.3em;
+					label.form-check-label {
+						color: $white;
+					}
+				}
+			}
+		}
+	}
+}

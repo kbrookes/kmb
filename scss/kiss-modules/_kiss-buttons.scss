@@ -1,0 +1,126 @@
+//// BUTTONS ////
+
+.btn {
+	text-transform: uppercase;
+}
+
+.btn-white__outlined,
+.btn-outline-white {
+	border: 2px solid $white;
+	//background-color: transparent;
+	background-color: rgba($background-dark, .4);
+	color: $white;
+	text-transform: uppercase;
+	&:hover {
+		background-color: $brand-primary;
+		color: $white;
+	}
+}
+
+
+
+.btn-orange {
+	color: $white;
+	background-color: $orange;
+	border-color: $orange;
+	&:hover {
+		background-color: darken($orange, 10%);
+		border-color: darken($orange, 10%);
+		color: $white !important;
+	} 
+	&__outlined {
+		background-color: transparent;
+		color: $orange;
+		&:hover {
+			background-color: transparent;
+			color: darken($orange, 10%);
+		}
+	}
+}
+
+.btn-outline-orange {
+	color: $brand-secondary !important;
+	background-color: fade($background-dark, 0.2);
+	border: 3px solid $orange;
+	&:hover {
+		background-color: $brand-secondary;
+		border-color: $brand-secondary;
+		color: $white !important;
+	}
+	#main-nav & {
+		padding: 7px 14px;
+		@include rem(font-size, 13);
+		line-height: 16px;
+	}
+	.noHero #main-nav.notScrolled & {
+		color: $white !important;
+		border: 3px solid $white;
+		padding: 7px 14px;
+		@include rem(font-size, 13);
+		line-height: 16px;
+	}
+}
+
+#main-nav.notScrolled.navbar-light .navbar-nav .active .nav-link.btn-outline-orange:hover,
+#main-nav.notScrolled.navbar-light .navbar-nav .nav-link.btn-outline-orange:hover,
+#main-nav.notScrolled.navbar-light .navbar-nav .btn-outline-orange.nav-link.active {
+	color: $white;
+}
+
+.btn-green {
+	color: $white;
+	background-color: $green;
+	border-color: $green;
+	&:hover {
+		background-color: darken($green, 10%);
+		border-color: darken($green, 10%);
+	}
+	&__outlined {
+		background-color: transparent;
+		color: $green;
+		&:hover {
+			color: $white;
+		}
+	}
+}
+
+.btn-nav {
+	margin-left: 5px;
+}
+
+.btn-border-2x {
+	border-width: 2px;
+	&:hover {
+		border-width: 2px;
+	}
+}
+
+/// Add space to two buttons next to each other
+.btn-2x {
+	&:first-child {
+		margin-right: 8px;
+	}
+	&:last-child {
+		margin-left: 8px;
+	}
+}
+
+.mixitup-control-active {
+	
+}
+
+.btn-outline-primary.mixitup-control-active {
+	background-color: $brand-primary;
+	color: $white;
+}
+
+/// PER-TEMPLATE CUSTOMISATIONS
+// Adjust these for styles that might be different from site to site
+
+.btn {
+	text-transform: uppercase;
+}
+
+.btn-white__outlined {
+	background-color: rgba($background-dark, .4);
+}

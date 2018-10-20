@@ -1,0 +1,88 @@
+///// CTA Blocks
+// It's critical to ensure you use the 'inherited' module style,
+// or one where the external wrapper has a class of 'moduletable'
+// .cta-module variants need to be used with module chromes setup specifically for them
+
+.moduletable.cta-block {
+	padding-top: $padding-v-m;
+	padding-bottom: $padding-v-m;
+	h3 {
+		color: $brand-primary;
+		margin: 0 0 $padding-v-s;
+	}
+	
+	.custom {
+		max-width: 768px;
+		@include make-container();
+		&.cta-block {
+			
+		}
+	}
+	&__primary {
+		background-color: $brand-primary;
+		color: $white;
+		h3,
+		h4 {
+			color: $white;
+		}
+	}
+	&__secondary {
+		background-color: $brand-secondary;
+		color: $white;
+		h3,
+		h4 {
+			color: $white;
+		}
+	}
+	&__dark {
+		background-color: $background-dark;
+		color: $white;
+		h3 {
+			color: $brand-primary;
+		}
+	}
+	&__light {
+		background-color: $background-light;
+		color: $white;
+		h3 {
+			color: $brand-primary;
+		}
+	}
+}
+
+.cta-module {
+	padding: $padding-v-m 0;
+	.above-footer & {
+		padding: $padding-v-s 0;
+	}
+	&.bg-primary {
+		h3 {
+			color: $white;
+			font-weight: 500;
+			@include rem(font-size, 26);
+		}
+		p {
+			color: $white;
+			@include rem(font-size, 20);
+		}
+	}
+	&.bg-background__dark {
+		background-color: $background-dark;
+		h3 {
+			color: $white;
+			font-weight: 500;
+			@include rem(font-size, 26);
+		}
+		p {
+			color: $white;
+			@include rem(font-size, 20);
+		}
+	}
+}
+
+/// PER-TEMPLATE CUSTOMISATIONS
+.moduletable.cta-block {
+	h4 {
+		padding-bottom: $padding-v-s;
+	}
+}

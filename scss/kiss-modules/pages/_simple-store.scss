@@ -1,0 +1,176 @@
+//// GENERAL K2 ARTICLE/ITEM STYLES
+/// Typically many of the unused elements will be stripped out, 
+/// particularly comments and print/email/function type buttons
+/// I may wind up adding back in a generic type of sharer
+/// and I will start adding styles for elements as needed.
+
+/// CATEGORY VIEW
+.store-page {
+	&__list {
+		&-leading {
+			margin-bottom: $padding-v-m;
+		}
+		&-primary {
+			&_item {
+				margin-bottom: $padding-v-s;
+			}
+		}
+	}
+	//// CATEGORY ITEM VIEW 
+	&__item {
+		margin-bottom: $padding-v-s;
+		&-image {
+			margin-bottom: 15px;
+		}
+		&-header {
+			h3 {
+				border-bottom: 1px solid $background-light;
+				color: $brand-primary;
+				@include rem(font-size, 20);
+				text-transform: uppercase;
+				margin-bottom: 0.4em;
+				padding-bottom: 0.2em;
+			}	
+		}
+		&-type {
+			border-bottom: 1px solid $background-light;
+			color: $brand-secondary;
+			@include rem(font-size, 14);
+			margin-bottom: 0.4em;
+			padding-bottom: 0.4em;
+		}
+		&-intro {
+			padding-bottom: $padding-v-s;
+		}
+		&-actions {
+			display: flex;
+			justify-content: flex-start;
+			> div {
+				margin-right: 5px;
+			}
+		}
+		&-payments {
+			align-items: center;
+			display: flex;
+			justify-content: space-between;
+			h4 {
+				color: $brand-secondary;
+				@include rem(font-size, 22);
+				font-weight: bold;
+				margin: 0;
+				small {
+					color: $background-light;
+					@include rem(font-size, 12);
+					font-weight: 200;
+				}
+			}
+		}
+	}
+}
+
+
+/// ITEM VIEW
+.store-item {
+	&__header {
+		h2 {
+			color: $brand-primary;
+		}
+	}
+	&__body {
+		h3 {
+			color: $brand-secondary;
+		}
+		&-purchase {
+			align-items: flex-end;
+			border-top: 1px solid lighten($background-light, 15%);
+			display: flex;
+			justify-content: start;
+			margin-top: 30px;
+			padding-top: 15px;
+			.sale-price {
+				color: $brand-primary;
+			}
+			.j2store-add-to-cart {
+				margin-left: 0;
+				margin-right: 8px;
+			}
+		}
+		&-alt-price {
+			background-color: $brand-primary;
+			color: $white;
+			margin-top: 15px;
+			padding: 15px;
+			a {
+				color: $background-light;
+				&:hover {
+					color: $white;
+				}
+			}
+		}
+		&-moreinfo {
+			margin-top: $padding-v-s;
+			@include rem(font-size, 12);
+			margin-bottom: $padding-v-m;
+			text-transform: uppercase;
+		}
+	}
+	&__sidebar {
+		&-block {
+			margin-bottom: $padding-v-s;
+			&:last-child {
+				margin-bottom: 0;
+			}
+			&_logo {
+				padding: 30px;
+				text-align: center;
+			}
+			img {
+				max-width: 100%;
+				margin: 0 auto;
+			}
+			.itemSocialSharing {
+				display: flex;
+				justify-content: center;
+			}
+			&_category {
+				border-top: 1px solid $background-light;
+				border-bottom: 1px solid $background-light;
+				padding: 8px 0;
+				text-align: center;
+			}
+			&_disclaimer {
+				background: lighten($background-light, 15%);
+				color: $background-dark;
+				@include rem(font-size, 14);
+				padding: 15px;
+			}
+		}
+	}
+	&__attachments {
+		ul {
+			li {
+				font-size: 13px;
+				list-style: none;
+				display: flex;
+				padding: 5px 0;
+				&:before{
+					content: "\f019";
+					color: $brand-primary;
+					font-family: "FontAwesome";
+					width: 10px;
+					height: 10px;
+					margin-right: 10px;
+				}
+			}
+		}
+	}
+	.itemNavigation {
+		margin-top: $padding-v-m;
+		.itemNavigationTitle {
+			color: $brand-secondary;
+			@include rem(font-size, 14);
+			font-weight: bold;
+			text-transform: uppercase;
+		}
+	}
+}

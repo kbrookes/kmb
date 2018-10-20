@@ -1,0 +1,48 @@
+/// HOW TO USE ///
+// Adjust the variables for fonts & colours in the variables file. You may also want to import a current version of Bootstrap and adjust it's variables to match.
+
+@import "kiss-mixins"; // Supporting Mixins
+@import "kiss-colours"; // Adjust site-wide colours
+@import "kiss-variables"; // Adjust site-wide variables
+@import "kiss-buttons"; // Extend button styles
+@import "kiss-common"; // Common styles that apply site-wide. E.g. Set universal padding sizes.
+// MODULES & BLOGS
+@import "modules/blog-items";
+@import "modules/blog-items-horizontal";
+@import "modules/careers-form";
+@import "modules/client-logos";
+@import "modules/content-blocks";
+@import "modules/elevator"; 
+@import "modules/hero-header";
+@import "modules/info-blocks";
+@import "modules/info-blocks-graphic";
+@import "modules/k2-big-statement";
+@import "modules/resume-list";
+@import "modules/service-blocks";
+@import "modules/tag-module";
+@import "modules/testimonials";
+@import "modules/modules-common"; // MUST COME LAST IN MODULE LIST
+// PAGES
+@import "pages/all-pages"; // Common styles used across all page types
+@import "pages/blog"; // Includes category & item styles
+@import "pages/team"; // Includes category & item styles
+//@import "pages/casestudies"; // Includes category & item styles
+@import "pages/casestudies-filtered"; // Includes category & item styles with a filter
+@import "pages/careers"; // Includes category & item styles
+@import "pages/article-general"; // GENERAL STYLE FOR ALL ARTICLES, lots of base styles
+@import "pages/simple-store"; // Includes category & item styles
+@import "pages/filtered-content"; // Creates filters from subcategories
+@import "pages/tags";
+// Extra Layouts
+@import "layouts/pricing-table";
+@import "layouts/feature-lists";
+@import "layouts/cta-blocks";
+@import "layouts/main-nav";
+@import "layouts/rsform-fixes";
+@import "layouts/footer-nav";
+@import "layouts/tables";
+@import "layouts/pricing-cards";
+@import "layouts/offcanvas";
+@import "layouts/content-templates";
+@import "layouts/forms";
+@import "layouts/sidebar";

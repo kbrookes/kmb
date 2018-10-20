@@ -1,0 +1,311 @@
+//// HERO HEADER MODULE
+/// For large heros on home pages. 
+/// Requires hero-header.php mod_custom, hero-header module position in the index.php
+/// Use with ModuleStyle None
+
+.hero-header {
+	&__wrap {
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		display: flex;
+		min-height: 400px;
+		overflow: hidden;
+		position: relative;
+		// Basic center style
+		.container {
+			align-items: center;
+			display: flex;
+			justify-content: center;
+			max-width: 800px;
+		}
+		&-inner {
+			text-align: center;
+			@include media-breakpoint-up(xs) {
+				padding-top: calc(#{$header-xs} + 30px);
+			}
+			@include media-breakpoint-up(sm) {
+				padding-top: calc(#{$header-sm} + 30px);
+			}
+			@include media-breakpoint-up(md) {
+				padding-top: calc(#{$header-md} + 30px);
+			}
+			@include media-breakpoint-up(lg) {
+				padding-top: calc(#{$header-lg} + 30px);
+			}
+			@include media-breakpoint-up(xl) {
+				padding-top: calc(#{$header-xl} + 30px);
+			}
+			@include media-breakpoint-up(xxl) {
+				padding-top: calc(#{$header-xxl} + 30px);
+			}
+			.btn + .btn {
+				margin-left: 15px;
+			}
+		}
+		
+		// Required only for Parallax backgrounds
+		&.parallax {
+			& > img {
+				position: absolute;
+			}
+		}
+	}
+	
+	h1 {
+		color: $white;
+		margin: 0 0 0.1em;
+		text-shadow: 1px 1px 4px $background-dark;
+	}
+	h2 {
+		color: $white;
+		margin: 0;
+		text-shadow: 1px 1px 4px $background-dark;
+	}
+	//// COLOUR ADJUSTMENTS
+	&__multiply-primary .parallax-inner {
+		background-color: $brand-primary;
+		background-blend-mode: soft-light;
+		//IE 9 and down
+		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+		
+		// IE 10 and 11
+		@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+		    opacity: 0.8;
+		}
+	}
+	&__darken-25 .parallax-inner { // Remove .parallax-inner if not using parallax
+		&::before {
+			content: '';
+			position: absolute;
+			width: 100%;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			background-color: rgba($background-dark,.25);
+		}
+	}
+	&__darken-50 .parallax-inner { // Remove .parallax-inner if not using parallax
+		&::before {
+			content: '';
+			position: absolute;
+			width: 100%;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			background-color: rgba($background-dark,.5);
+		}
+		.hero-header__wrap-inner {
+			h1,h3,p {
+				color: $white;
+			}
+			h2,h4 {
+				color: $brand-secondary;
+			}
+		}
+	}
+	&__darken-75 .parallax-inner { // Remove .parallax-inner if not using parallax
+		&::before {
+			content: '';
+			position: absolute;
+			width: 100%;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			background-color: rgba($background-dark,.75);
+		}
+		.hero-header__wrap-inner {
+			h1,h3,p {
+				color: $white;
+			}
+			h2,h4 {
+				color: $brand-secondary;
+			}
+		}
+	}
+	&__primary-25 .parallax-inner { // Remove .parallax-inner if not using parallax
+		&::before {
+			content: '';
+			position: absolute;
+			width: 100%;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			background-color: rgba($brand-primary,.25);
+		}
+	}
+	&__primary-50 .parallax-inner { // Remove .parallax-inner if not using parallax
+		&::before {
+			content: '';
+			position: absolute;
+			width: 100%;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			background-color: rgba($brand-primary,.5);
+		}
+		.hero-header__wrap-inner {
+			h1 {
+				color: $white;
+			}
+			h2 {
+				color: $brand-secondary;
+			}
+		}
+	}
+	&__primary-75 .parallax-inner { // Remove .parallax-inner if not using parallax
+		&::before {
+			content: '';
+			position: absolute;
+			width: 100%;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			background-color: rgba($brand-primary,.75);
+		}
+		.hero-header__wrap-inner {
+			h1 {
+				color: $white;
+			}
+			h2 {
+				color: $brand-secondary;
+			}
+		}
+	}
+	&__lighten-25 .parallax-inner { // Remove .parallax-inner if not using parallax
+		&::before {
+			content: '';
+			position: absolute;
+			width: 100%;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			background-color: rgba($white,.25);
+		}
+	}
+	&__lighten-50 .parallax-inner { // Remove .parallax-inner if not using parallax
+		&::before {
+			content: '';
+			position: absolute;
+			width: 100%;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			background-color: rgba($white,.5);
+		}
+		.hero-header__wrap-inner {
+			h1 {
+				color: $background-dark;
+			}
+			h2 {
+				color: $brand-primary;
+			}
+		}
+	}
+	&__lighten-75 .parallax-inner { // Remove .parallax-inner if not using parallax
+		&::before {
+			content: '';
+			position: absolute;
+			width: 100%;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			background-color: rgba($white,.75);
+		}
+		.hero-header__wrap-inner {
+			h1 {
+				color: $background-dark;
+			}
+			h2 {
+				color: $brand-primary;
+			}
+		}
+	}
+	.content-left {
+		.container {
+			max-width: 1140px;
+			justify-content: flex-start;
+		}
+		.hero-header__wrap-inner {
+			max-width: 50%;
+			text-align: left;
+		}
+	}
+	.content-right {
+		.container {
+			max-width: 1140px;
+			justify-content: flex-end;
+		}
+		.hero-header__wrap-inner {
+			max-width: 50%;
+			text-align: right;
+		}
+	}
+	.content-left,
+	.content-right {
+		.hero-header__wrap-inner {
+			@include media-breakpoint-down(xl) {
+				max-width: 50%;
+			}
+			@include media-breakpoint-down(md) {
+				max-width: 75%;
+			}
+			@include media-breakpoint-down(sm) {
+				max-width: 100%;
+			}
+		}
+	}
+}
+
+/// PER-TEMPLATE CUSTOMISATIONS
+// Adjust these for styles that might be different from site to site
+.hero-header {
+	&__wrap {
+		min-height: 400px;
+		.front &,
+		.page-demo-home & {
+			min-height: 600px;
+		}
+		&-inner {
+			.category-6 & {
+				width: 758px;
+				max-width: 100%;
+				margin: 0 auto;
+			}
+			h1 {
+				font-weight: 500;
+				.front &,
+				.page-demo-home & {
+					@include rem(font-size, 48);
+					margin-bottom: 1em;
+				}
+			}
+			h2 {
+				font-weight: 300;
+				text-transform: uppercase;
+				@include rem(font-size, 24);
+				.front &,
+				.page-demo-home & {
+					@include rem(font-size, 32);
+				}
+				.page-demo-home & {
+					margin-bottom: 30px;
+				}
+			}
+			h3 {
+				.page-demo-home & {
+					margin-bottom: 30px;
+				}
+			}
+		}
+	}
+	.home-green & {
+		background-color: #4ec0ab;
+		h1 {
+			text-shadow: none;
+		}
+		h3 {
+			color: $white;
+		}
+	}
+}

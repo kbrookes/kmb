@@ -1,0 +1,22 @@
+// input pixel value unitless: 8 vs 8px
+// ex. @include rem(padding, 8 12 16 24)
+
+// Global Vars
+
+$basefontsize: 16 !default;
+
+
+@mixin rem($property, $px: $basefontsize) {
+
+    $pxvalues: null;
+    $remvalues: null;
+
+    @each $pxvalue in $px {
+        $pxvalues: append($pxvalues, ($pxvalue)+px);
+	$remvalues: append($remvalues, ($pxvalue/$basefontsize)+rem);
+    }
+
+	#{$property}: $pxvalues;
+	#{$property}: $remvalues;
+
+}

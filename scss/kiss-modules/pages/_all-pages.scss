@@ -1,0 +1,30 @@
+
+//// SOCIAL SHARING ON K2 ITEMS with DEFAULT BUTTONS
+.itemSocialSharing {
+	align-items: center;
+	display: flex;
+	& > div {
+		max-height: 20px;
+		margin-right: 8px;
+		vertical-align: middle;
+	}
+	.itemFacebookButton {
+		.fb_iframe_widget {
+			span {
+				vertical-align: top !important;
+			}
+		}
+	}
+}
+
+
+
+///// DEMO PAGES
+
+.page-demo {
+	&-home {
+		div.body {
+			display: none;
+		}
+	}
+}

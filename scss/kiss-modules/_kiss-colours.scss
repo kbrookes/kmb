@@ -1,0 +1,27 @@
+//// COLOURS ////
+
+
+$brand-secondary: #EC1F78;
+$background-dark: #374650;
+$background-light: #cdcdc8;
+$alternate: #9D005C;
+
+$brand-green: #00e48b;
+$brand-red: #e6004b;
+
+$blue-dark: $brand-primary;
+$blue-light: lighten($brand-primary, 20%);
+$grey-dark: $background-dark;
+$grey-light: $background-light;
+$orange: $brand-secondary;
+$green: $brand-green;
+$red: $brand-red;
+
+$white: #fff;
+
+/// BOOTSTRAPPERY
+$primary: $brand-primary;
+$bg-primary: $brand-primary;
+$secondary: $brand-secondary;
+$green: $brand-green;
+$red: $brand-red;

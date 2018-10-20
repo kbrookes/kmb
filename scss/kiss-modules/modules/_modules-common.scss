@@ -1,0 +1,29 @@
+//// FOR STANDARD MODULE CUSTOMISATION
+
+/// Make sure module headings get standard margins/padding
+.moduletable > h3 {
+	margin: 0 0 $padding-v-m;;
+	padding: 0;
+}
+
+/// STANDARD COLOUR VARIATIONS
+.moduletable {
+	&.bg-primary,
+	&.bg-secondary,
+	&.bg-dark {
+		> h3 {
+			color: $white;
+		}
+	}
+	&.bg-light {
+		> h3 {
+			color: $brand-primary;
+		}
+	}
+}
+
+/// ADD CONTAINER TO MODULE 
+.make-container .make-container {
+	max-width: 1140px;
+	@include make-container();
+}

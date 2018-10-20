@@ -1,0 +1,171 @@
+//// MAIN NAVIGATION MODIFICATIONS
+// REQUIRES jQUERY FROM template.js to add classses/change height on scroll
+// REMOVE THIS AND JS ENTIRELY TO RESTORE STANDARD BOOTSTRAP FUNCTIONALITY
+
+#main-nav {
+	&.notScrolled {
+		&.navbar {
+			border-bottom: transparent;
+			transition: 0.6s ease all;
+			&-primary {
+				background: rgba($white, 0);
+				transition: 0.6s ease all;
+				.navbar-nav {
+					.nav-link {
+						color: $white;
+						transition: 0.6s ease all;
+					}
+					.active .nav-link,
+					.nav-link:hover,
+					.nav-link.active {
+						color: lighten($brand-primary, 20%);
+						transition: 0.6s ease all;
+					}
+				}
+			}
+			.noHero &.navbar {
+				background: $brand-primary;
+			}
+		}
+	}
+	&.navScrolled {
+		border-bottom: 3px solid lighten($brand-primary, 20%);
+		transition: 0.6s ease all;
+		&.navbar {
+			&-primary {
+				background: rgba($white, 1);
+				transition: 0.6s ease all;
+				.navbar-nav {
+					.nav-link {
+						color: $brand-primary;
+						transition: 0.6s ease all;
+					}
+					.active .nav-link,
+					.nav-link:hover,
+					.nav-link.active {
+						color: $brand-secondary;
+						transition: 0.6s ease all;
+					}
+				}
+				.navbar-toggler {
+					color: $brand-primary;
+					border-color: $brand-secondary;
+				}
+				.navbar-toggler-icon {
+				    background-image: $navbar-primary-scrolled-toggler-icon-bg;
+				}
+			}
+		}
+	}
+}
+
+
+///// IF USING SVG LOGO THAT CAN CHANGE COLOURS BASED ON SCROLL STATE
+
+#main-nav {
+	&.notScrolled {
+		.navbar {
+			&-brand {
+				svg {
+					.logo-primary-fill {
+						fill: $white;
+						transition: 0.6s ease all;
+					}
+					.logo-secondary-fill {
+						fill: $brand-secondary;
+						transition: 0.6s ease all;
+					}
+					.logo-alternate-fill {
+						fill: $white;
+						transition: 0.6s ease all;
+					}
+					.logo-primary-stroke {
+						stroke: $white;
+						transition: 0.6s ease all;
+					}
+					.logo-bgdark-fill {
+						fill: $white;
+						transition: 0.6s ease all;
+					}
+					.logo-bgdark-stroke {
+						stroke: $white;
+						transition: 0.6s ease all;
+					}
+				}
+			}
+		}
+	}
+	&.navScrolled {
+		.navbar {
+			&-brand {
+				svg {
+					.logo-primary-fill {
+						fill: $brand-primary;
+						transition: 0.6s ease all;
+					}
+					.logo-primary-stroke {
+						stroke: $brand-primary;
+						transition: 0.6s ease all;
+					}
+					.logo-secondary-fill {
+						fill: $brand-secondary;
+						transition: 0.6s ease all;
+					}
+					.logo-secondary-stroke {
+						stroke: $brand-secondary;
+						transition: 0.6s ease all;
+					}
+					.logo-alternate-fill {
+						fill: $alternate;
+						transition: 0.6s ease all;
+					}
+					.logo-alternate-stroke {
+						fill: $alternate;
+						transition: 0.6s ease all;
+					}
+					.logo-bgdark-fill {
+						fill: $background-dark;
+						transition: 0.6s ease all;
+					}
+					.logo-bgdark-stroke {
+						stroke: $background-dark;
+						transition: 0.6s ease all;
+					}
+				}
+			}
+		}
+	}
+}
+
+//// IF CHANGING SIZE OF LOGO ON SCROLL STATE
+#main-nav {
+	&.notScrolled {
+		.navbar-brand {
+			svg {
+				//transform: scale(1);
+				transition: 0.6s ease all;
+				width: 280px;
+				@include media-breakpoint-down(sm) {
+					width: 180px;
+				}
+				@include media-breakpoint-up(sm) {
+					width: 280px;	
+				}	
+			}
+		}
+	}
+	&.navScrolled {
+		.navbar-brand {
+			svg {
+				//transform: scale(.8);
+				transition: 0.6s ease all;
+				width: 180px;
+			}
+		}
+	}
+}
+
+/// NAVBAR BRAND LOGO
+//.navbar-brand svg {
+//	max-width: 280px;
+//}

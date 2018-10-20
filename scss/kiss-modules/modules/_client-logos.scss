@@ -1,0 +1,8 @@
+//// ADJUST CLIENT LOGOS
+.client-logos {
+	&__item {
+		img {
+			@include img-fluid();
+		}
+	}
+}

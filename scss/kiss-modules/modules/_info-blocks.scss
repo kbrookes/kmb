@@ -1,0 +1,26 @@
+//// INFO BLOCK PITCH MODULE
+/// For a row of info blocks. 
+/// Requires info-block.php mod_custom, info-block module position in the index.php
+/// Use with ModuleStyle None
+
+.info-block {
+	padding-top: $padding-v-m;
+	padding-bottom: $padding-v-m;
+	text-align: center;
+	img {
+		margin: 0 auto;
+		width: 15%;
+	}
+	h3 {
+		margin: 1rem 0;
+	}
+	p {
+		@include rem(font-size, 15);
+	}
+}
+/// PER-TEMPLATE CUSTOMISATIONS
+// Adjust these for styles that might be different from site to site
+.info-block {
+	background-color: $brand-primary;
+	color: $white;
+}

@@ -1,0 +1,79 @@
+/// FEATURES LISTS
+.features-table {
+	background-color: $brand-primary;
+	color: $white;
+	padding: $padding-v-m;
+	text-align: center;
+	h2 {
+		color: $white;
+		margin: 0 0 30px;
+	}
+	h3 {
+		color: rgba($white, 0.6);
+		@include rem(font-size, 20);
+		margin: 0 0 30px;
+	}
+	.main-features {
+		&__item {
+			margin-bottom: 15px;
+			p {
+				&:first-child {
+					@include rem(font-size, 40);
+				}
+			}
+			h4 {
+				font-weight: bold;
+				@include rem(font-size, 20);
+			}
+		}
+	}
+	&__primary {
+		h3,
+		h4 {
+			color: $white;
+		}
+	}
+}
+
+.features-columns {
+	background-color: $background-dark;
+	padding: $padding-v-m;
+	&__inner {
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+	h3 {
+		color: $background-light;
+		text-align: center;
+		padding-bottom: $padding-v-s;
+	}
+	h4 {
+		color: lighten($brand-primary, 10%);
+		@include rem(font-size, 20);
+		font-weight: 600;
+	}
+	p {
+		color: $white;
+		@include rem(font-size, 18);
+	}
+	ul li {
+		color: $white;
+	}
+	.features-list {
+		padding-left: 0;
+		&__item {
+			@include rem(font-size, 13);
+			list-style: none;
+			display: flex;
+			padding: 5px 0;
+			&:before{
+				content: "\f00c";
+				color: green;
+				font-family: "FontAwesome";
+				width: 10px;
+				height: 10px;
+				margin-right: 10px;
+			}
+		}
+	}
+}

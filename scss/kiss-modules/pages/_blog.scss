@@ -1,0 +1,274 @@
+//// BLOG PAGES
+// This includes category view and individual post view
+// MUST also add in the com_k2/blog files
+
+//// CATEGORY VIEWS
+.blog-page {
+	/// CATEGORY
+	/// CATEGORY LIST
+	&__list {
+		
+	}
+	/// CATEGORY LIST ITEM
+	&__item {
+		margin-bottom: $padding-v-m;
+		&-image {
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			margin-bottom: 15px;
+			padding-top: 43%;
+			position: relative;
+			a {
+				cursor: hand;
+				position: absolute;
+				height: 100%;
+				width: 100%;
+				top: 0;
+				left: 0;
+				display: flex;
+				.blog-page__item-image_inner {
+					align-items: center;
+					background-color: rgba($brand-primary, 0);
+					display: flex;
+					justify-content: center;
+					transition: 0.3s ease all;
+					width: 100%;
+					span.read-more {
+						border: 1px solid transparent;
+						color: transparent;
+						padding: 8px 16px;
+						text-decoration: none;
+						transform: scale(0.7);
+						transition: 0.6s ease all;
+					}
+				}
+				&:hover {
+					text-decoration: none;
+					.blog-page__item-image_inner {
+						background-color: rgba($brand-primary, 0.5);
+						span.read-more {
+							border: 1px solid $white;
+							color: $white;
+							transform: scale(1);
+							text-decoration: none;
+						}
+					}
+				}
+			}
+		}
+		&-header {
+			h3 {
+				@include rem(font-size, 20);
+				line-height: 1.2em;
+				a {
+					transition: 0.3s ease all;
+					&:hover {
+						color: darken($brand-primary, 20%);
+						text-decoration: none;
+					}
+				}
+			}
+			&_info {
+				border-top: 1px solid lighten($brand-primary, 40%);
+				border-bottom: 1px solid lighten($brand-primary, 40%);
+				color: $background-light;
+				@include rem(font-size, 12);
+				line-height: 1;
+				margin-top: 0.1em;
+				margin-bottom: 0.5em;
+				padding-top: 0.4em;
+				padding-bottom: 0.2em;
+				text-transform: uppercase;
+			}
+		}
+		&-intro {
+			h2 {
+				@include rem(font-size, 22);
+				color: $brand-primary;
+			}
+			h3 {
+				@include rem(font-size, 18);
+				color: $brand-secondary;
+			}
+		}
+		&-actions {
+			&_tags {
+				@include rem(font-size, 13);
+				span {
+					white-space: nowrap;
+					a {
+						color: $background-light;
+						transition: 0.3s ease all;
+						&:hover {
+							color: $brand-secondary;
+							text-decoration: none;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+//// ITEM VIEWS
+.blog-item {
+	&__header {
+		margin-bottom: $padding-v-m;
+		&-info {
+			display: flex;
+			justify-content: space-around;
+			&_inner {
+				border-bottom: 1px solid $background-light;
+				color: $background-light;
+				@include rem(font-size, 13);
+				text-transform: uppercase;
+			}
+		}
+		&-tags {
+			display: flex;
+			justify-content: center;
+			padding-top: $padding-v-s;
+			span {
+				white-space: nowrap;
+				padding-left: 0.3em;
+				padding-right: 0.3em;
+				a {
+					color: $background-light;
+					@include rem(font-size, 13);
+					&:hover {
+						color: $brand-secondary;
+						text-decoration: none;
+					}
+				}
+			}
+		}
+	}
+	a {
+		color: $brand-primary;
+		transition: 0.3s ease all;
+		&:hover {
+			color: $brand-secondary;
+			text-decoration: none;
+		}
+	}
+	&__body {
+		&-content {
+			h2 {
+				color: $brand-primary;
+			}
+			h3 {
+				color: $brand-primary;
+			}
+			h4 {
+				color: $brand-primary;
+			}
+			h5 {
+				color: $background-light;
+			}
+			.itemIntroText {
+				p {
+					color: $brand-primary;
+					@include rem(font-size, 20);
+				}
+			}
+		}
+	}
+	&__author {
+		border-top: 1px solid $brand-primary;
+		border-bottom: 1px solid $brand-primary;
+		padding-top: $padding-v-s;
+		padding-bottom: $padding-v-s;
+		margin-top: $padding-v-s;
+		margin-bottom: $padding-v-s;
+	}
+	&__related {
+		h3 {
+			color: $background-dark;
+			@include rem(font-size, 18);
+			margin: 0 0 1em;
+		}
+		h4 {
+			@include rem(font-size, 16);
+		}
+		&-image {
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			margin-bottom: 15px;
+			padding-top: 43%;
+			position: relative;
+			a {
+				cursor: hand;
+				position: absolute;
+				height: 100%;
+				width: 100%;
+				top: 0;
+				left: 0;
+				display: flex;
+				.blog-item__related-image_inner {
+					align-items: center;
+					background-color: rgba($brand-primary, 0);
+					display: flex;
+					justify-content: center;
+					transition: 0.3s ease all;
+					width: 100%;
+					span.read-more {
+						border: 1px solid transparent;
+						color: transparent;
+						padding: 8px 16px;
+						text-decoration: none;
+						transform: scale(0.7);
+						transition: 0.6s ease all;
+					}
+				}
+				&:hover {
+					text-decoration: none;
+					.blog-item__related-image_inner {
+						background-color: rgba($brand-primary, 0.5);
+						span.read-more {
+							border: 1px solid $white;
+							color: $white;
+							transform: scale(1);
+							text-decoration: none;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+//// PROJECT SPECIFIC STYLES
+.blog-page {
+	&__item {
+		&-image {
+			border: 3px solid $brand-primary;
+		}
+		&-header {
+			h3 {
+				font-weight: 200;
+			}
+			&_info {
+				font-weight: 200;
+			}
+		}
+		&__author {
+			&-image {
+				img {
+					border: 3px solid $brand-primary;
+					border-style: solid;
+				}
+			}
+		}
+	}
+}
+
+.blog-item {
+	&__related {
+		&-image {
+			border: 3px solid $brand-primary;
+		}
+	}
+}

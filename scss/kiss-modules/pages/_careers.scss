@@ -1,0 +1,68 @@
+//// STYLES FOR A CAREERS TYPE PAGE
+/// REQUIRES COM_K2 CAREERS
+// REQUIRES EXTRA FIELDS TO BE CREATED TO FUNCTION CORRECTLY
+
+
+// CATEGORY LAYOUT
+.careers-page {
+	.itemListCategory {
+		h2 {
+			color: $brand-primary;
+			@include rem(font-size, 32);
+			text-align: center;
+			margin: 0 0 $padding-v-s;
+		}
+		p {
+			@include rem(font-size, 20);
+			text-align: center;
+			margin-bottom: $padding-v-m;
+		}
+	}
+	&__list {
+		&-item {
+			border-bottom: 1px solid $background-light;
+			margin-bottom: $padding-v-s;
+			padding-bottom: $padding-v-s;
+		}
+	}
+}
+
+// CATEGORY ITEM LAYOUT
+.career-listing {
+	&__title {
+		h3 {
+			border-bottom: 3px solid $brand-primary;
+			a {
+				transition: 0.3s ease all;
+				&:hover {
+					color: darken($brand-primary, 10%);
+					text-decoration: none;
+				}
+			}
+		}
+	}
+	&__content {
+		h4 {
+			color: $brand-secondary;
+			@include rem(font-size, 18);
+			text-transform: uppercase;
+		}
+	}
+}
+
+// ITEM LAYOUT
+.careers-item {
+	&__header {
+		h2 {
+			color: $brand-primary;
+		}
+	}
+	&__content {
+		margin-bottom: $padding-v-s;
+		h3 {
+			color: $brand-secondary;
+			@include rem(font-size, 16);
+			text-transform: uppercase;
+		}
+	}
+}

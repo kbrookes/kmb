@@ -1,0 +1,155 @@
+
+
+.pricing-table{
+	font-family: $body-font;
+	.block-heading {
+  		padding-top: 50px;
+  		margin-bottom: 40px;
+  		text-align: center;
+  		h2 {
+	  		color: $brand-primary;
+  		}
+  		p {
+	  		text-align: center;
+			max-width: 420px;
+			margin: auto;
+			opacity: 0.7; 
+  		}
+	}
+	.item {
+		background-color: $background-dark;
+		//box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.075);
+		border-top: 4px solid $brand-secondary;
+		height: 100%;
+		overflow: hidden;
+		position: relative; 
+		button {
+			font-weight: 600; 			
+		}
+		p {
+			text-align: center;
+			margin-top: 20px;
+			opacity: 0.7; 
+		}
+	}
+	.ribbon {
+		width: 160px;
+		height: 32px;
+		font-size: 12px;
+		text-align: center;
+		color: #fff;
+		font-weight: bold;
+		box-shadow: 0px 2px 3px rgba(136, 136, 136, 0.25);
+		background: #4dbe3b;
+		transform: rotate(45deg);
+		position: absolute;
+		right: -42px;
+		top: 20px;
+		padding-top: 7px; 
+	}
+	.heading {
+		background-color: $brand-primary;
+		color: $white;
+		font-weight: 800;
+		text-align: center;
+		padding: 30px 30px 10px;
+		border-bottom: 1px solid rgba($white, 0.1); 
+	}
+	.price {
+		background-color: $brand-primary;
+		padding: 30px;
+		position: relative;
+		text-align: center;
+		z-index: 20;
+		&:after {
+			bottom: -20px;
+			content: '';
+			left: 50%;
+			width: 0; 
+			height: 0; 
+			border-left: 20px solid transparent;
+			border-right: 20px solid transparent;  
+			border-top: 20px solid $brand-primary;
+			position: absolute;
+			transform: translateX(-50%);
+		}
+		h4 {
+			color: $white;
+			@include rem(font-size, 45);
+			font-weight: 200;
+			margin: 15px 0;
+			text-align: center;
+			small,
+			.small {
+				color: rgba($white, .5);
+				@include rem(font-size, 20);
+			}
+		}
+		p {
+			color: $white;
+			@include rem(font-size, 16);
+			font-weight: 600;
+		}
+		h5 {
+			color: $white;
+			@include rem(font-size, 16);
+			margin-bottom: 15px;
+		}
+	}
+	.popular {
+		.item {
+			border-top: 4px solid $brand-primary;
+			.heading {
+				background-color: $brand-secondary;
+			}
+			.price {
+				background-color: $brand-secondary;
+				&:after {
+					border-top-color: $brand-secondary;
+				}
+			}
+		}
+	}
+	.upsell {
+		background: $background-dark;
+		color: $white;
+		font-family: $heading-font;
+		font-weight: 600;
+		padding: 30px;
+		position: relative;
+		z-index: 10;
+		ul {
+			padding-left: 0;
+			li {
+				@include rem(font-size, 13);
+				font-weight: 400;
+				list-style: none;
+				display: flex;
+				padding: 5px 0;
+				&:before{
+					content: "\f00c";
+					color: green;
+					font-family: "FontAwesome";
+					width: 10px;
+					height: 10px;
+					margin-right: 10px;
+				}
+			}
+		}
+	}
+	.features {
+		padding: 30px;
+		&-list {
+			&__item {
+				
+			}
+		}
+	}
+	
+	.pricing-cta {
+		text-align: center;
+		margin: auto;
+		font-weight: 600;
+		padding: 30px; 
+	}
+}

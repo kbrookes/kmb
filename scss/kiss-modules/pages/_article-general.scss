@@ -1,0 +1,72 @@
+//// GENERAL K2 ARTICLE/ITEM STYLES
+/// Typically many of the unused elements will be stripped out, 
+/// particularly comments and print/email/function type buttons
+/// I may wind up adding back in a generic type of sharer
+/// and I will start adding styles for elements as needed.
+
+/// CATEGORY VIEW
+.general-page {
+	&__list {
+		&-leading {
+			margin-bottom: $padding-v-m;
+		}
+		&-primary {
+			&_item {
+				margin-bottom: $padding-v-s;
+			}
+		}
+	}
+}
+
+
+/// ITEM VIEW
+.general-item {
+	&__body {
+		&-content {
+			h3:first-child {
+				color: $brand-primary;
+				margin-bottom: $padding-v-s;
+			}
+		}
+	}
+	&__attachments {
+		ul {
+			li {
+				font-size: 13px;
+				list-style: none;
+				display: flex;
+				padding: 5px 0;
+				&:before{
+					content: "\f019";
+					color: $brand-primary;
+					font-family: "FontAwesome";
+					width: 10px;
+					height: 10px;
+					margin-right: 10px;
+				}
+			}
+		}
+	}
+	h1 {
+		color: $brand-primary;
+		font-weight: bold;
+		//text-align: center;
+		margin: 0 0 $padding-v-m;
+		padding: 0;
+	}
+	h2 {
+		color: $brand-secondary;
+		margin: 0 0 $padding-v-s;
+		//text-align: center;
+	}
+	h3,
+	.itemFullText h3 {
+		color: $brand-primary;
+		font-weight: bold;
+		margin: 0 0 $padding-v-s;
+		padding: 0;
+	}
+	p, ul li {
+		@include rem(font-size, 18);
+	}
+}

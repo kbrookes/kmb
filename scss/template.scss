@@ -1,0 +1,53 @@
+@import "kiss-modules/kiss-colours-params";
+@import "kiss-modules/kiss-colours";
+@import "bootstrap/bootstrap";
+@import "font-awesome/font-awesome";
+@import "kiss-modules/kiss-customiser";
+
+.content {
+    //min-height: 300px;
+}
+.large-icon {
+    font-size: 13em !important;
+}
+.contact .contact-address {
+    padding: 0 1.5rem;
+}
+.navbar .mod-languages {
+    padding-bottom: 0.425rem;
+    padding-top: 0.425rem;
+}
+.lang-inline {
+    list-style: outside none none;
+    margin: 0;
+}
+.lang-inline > li {
+    display: inline;
+    margin-left: 8px;
+}
+.login {
+    margin: 0 auto;
+    max-width: 330px;
+    padding-top: 1em;
+}
+.tags.inline {
+    padding-left: 0;
+}
+.tags.inline li {
+    display: inline;
+}
+.item-image {
+    margin-bottom: 20px;
+}
+
+#sass-message {
+    position: fixed;
+    z-index: 9999;
+    bottom: 0;
+    left: 0;
+    font-size: .85em;
+    display: inline-block;
+    background: rgba(0, 0, 0, .5);
+    color: #fff;
+    padding: .5em;
+}

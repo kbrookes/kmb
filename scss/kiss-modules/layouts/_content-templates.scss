@@ -1,0 +1,19 @@
+/// LEFT/RIGHT CONTENT BLOCKS
+.in-content__imageText {
+	max-width: 800px;
+	@include make-container();
+}
+
+
+
+
+/// Project Specific
+
+.in-content__imageText {
+	&-imageWrap {
+		text-align: right;
+		@include media-breakpoint-down(sm) {
+			text-align: center;
+		}
+	}
+}

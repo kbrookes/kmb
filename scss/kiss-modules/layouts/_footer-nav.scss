@@ -1,0 +1,58 @@
+//// LAYOUT FOR STANDARDISED FOOTER NAV
+footer.footer {
+	background: $background-dark;
+	color: $white;
+	padding-bottom: $padding-v-m;
+	padding-top: $padding-v-m;
+	.footer-nav {
+		padding-top: $padding-v-m;
+		padding-bottom: $padding-v-s;
+		.navbar-brand {
+			&__footer {
+				svg {
+					width: 100%;
+					.logo-primary-fill,
+					.logo-primary-stroke,
+					.logo-bgdark-stroke,
+					.logo-bgdark-fill {
+						fill: $white;
+						stroke: $white;
+					}
+				}
+			}
+		}
+		h3 {
+			color: $brand-primary;
+			@include rem(font-size, 24);
+			font-weight: 200;
+			text-transform: uppercase;
+		}
+		p {
+			color: $background-light;
+		}
+		ul.vertical-nav {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			li {
+				a.nav-link {
+					color: $background-light;
+					padding: 0 0 0.3em;
+					transition: 0.3s ease all;
+					&:hover {
+						color: lighten($brand-primary, 20%);
+						text-decoration: none;
+					}
+				}
+			}
+		}
+	}
+	#back-top {
+		color: $background-light;
+		transition: 0.3s ease all;
+		&:hover {
+			color: $brand-secondary;
+			text-decoration: none;
+		}
+	}
+}

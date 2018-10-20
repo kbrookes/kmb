@@ -1,0 +1,108 @@
+///// STYLES FOR TEAM PAGES
+/// For use with the com_k2 team override code
+/// Uses categories to display subcategories of teams - hasn't been tested with flat heirarchies,
+/// so should probably be extended at some point.
+
+.casestudy-page {
+	padding-bottom: $padding-v-m;
+	&__categories {
+		
+	}
+	&__list {
+		&-item {
+			&_image {
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: cover;
+				margin-bottom: 15px;
+				padding-top: 43%;
+				position: relative;
+				a {
+					position: absolute;
+					height: 100%;
+					width: 100%;
+					top: 0;
+					left: 0;
+					display: flex;
+					.casestudy-page__list-item_image-inner {
+						align-items: center;
+						background-color: rgba($brand-primary, 0);
+						display: flex;
+						justify-content: center;
+						transition: 0.3s ease all;
+						width: 100%;
+						span.read-more {
+							border: 1px solid transparent;
+							color: transparent;
+							padding: 8px 16px;
+							text-decoration: none;
+							transform: scale(0.7);
+							transition: 0.6s ease all;
+						}
+					}
+					&:hover {
+						text-decoration: none;
+						.casestudy-page__list-item_image-inner {
+							background-color: rgba($brand-primary, 0.5);
+							span.read-more {
+								border: 1px solid $white;
+								color: $white;
+								transform: scale(1);
+								text-decoration: none;
+							}
+						}
+					}
+				}
+			}
+			&_title {
+				h3 {
+					@include rem(font-size, 18);
+					margin: 0 0 0.2em;
+				}
+			}
+		}
+	}
+	&__item {
+		
+	}
+}
+
+
+
+/// PER-TEMPLATE CUSTOMISATIONS
+// Adjust these for styles that might be different from site to site
+.casestudy-page {
+	&__categories {
+		&-current {
+			text-align: center;
+			h2 {
+				color: $brand-primary;
+				font-weight: 200;
+				margin: 0 0 0.5em;	
+			}
+		}		
+	}
+	&__item {
+		&-content {
+			h2 {
+				color: $brand-primary;
+				font-weight: 200;
+				//text-transform: uppercase;
+			}
+		}
+		&-testimonial {
+			&_wrap {
+				background-color: $brand-primary;
+				padding: 30px;
+				blockquote.blockquote {
+					p {
+						color: $white;
+					}
+					footer.blockquote-footer {
+						color: rgba($white, 0.5);
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,32 @@
+//// K2 BIG STATEMENT MODULE
+/// To be used with K2 Content Module. 
+/// Requires the big-statement override in mod_k2_content. Can work in any position.
+/// Use with ModuleStyle None
+
+.big-statement {
+	padding-top: $padding-v-m;
+	padding-bottom: $padding-v-m;
+	h3 {
+		margin-bottom: $padding-v-s;
+	}
+}
+
+/// PER-TEMPLATE CUSTOMISATIONS
+// Adjust these for styles that might be different from site to site
+.big-statement {
+	h3 {
+		font-weight: 300;
+	}
+	@include media-breakpoint-up(xs) {
+		padding: 1rem 0;
+	}
+	@include media-breakpoint-up(md) {
+		padding: 1.5rem 1.5rem;
+	}
+	@include media-breakpoint-up(lg) {
+		padding: 4rem 4rem 2rem;
+	}
+	@include media-breakpoint-up(xl) {
+		padding: 4rem 10rem 2rem;
+	}
+}

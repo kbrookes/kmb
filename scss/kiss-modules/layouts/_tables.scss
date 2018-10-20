@@ -1,0 +1,38 @@
+.table {
+	margin: $padding-v-s 0;
+	&.table-even {
+		table-layout: fixed;
+		tbody {
+			tr:last-child {
+				td {
+					text-align: center;
+				}
+			}
+		}
+	}
+	&.col1-nobreak {
+		td:first-child {
+			color: $brand-secondary;
+			font-weight: bold;
+			white-space: nowrap;
+		}
+	}
+	.thead-dark {
+		th {
+			background-color: $brand-primary;
+			border-color: $brand-primary;
+		}
+	}
+	tr:last-child {
+		td {
+			border-bottom: 1px solid $brand-primary;
+		}
+	}
+	tr.emphasis {
+		td {
+			border-top: 3px solid $brand-primary;
+			color: $brand-primary;
+			font-weight: bold;
+		}
+	}
+}

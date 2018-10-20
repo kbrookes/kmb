@@ -1,0 +1,116 @@
+.tag {
+	/// CATEGORY
+	&-page {
+		&__header {
+			text-align: center;
+			h2 {
+				color: $brand-primary;
+				margin: 0 0 $padding-v-m 0;
+			}
+		}
+	}
+	/// CATEGORY LIST
+	&__list {
+		
+	}
+	/// CATEGORY LIST ITEM
+	&-item {
+		margin-bottom: $padding-v-m;
+		&__image {
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			margin-bottom: 15px;
+			padding-top: 43%;
+			position: relative;
+			a {
+				cursor: hand;
+				position: absolute;
+				height: 100%;
+				width: 100%;
+				top: 0;
+				left: 0;
+				display: flex;
+				.tag-item__image-inner {
+					align-items: center;
+					background-color: rgba($brand-primary, 0);
+					display: flex;
+					justify-content: center;
+					transition: 0.3s ease all;
+					width: 100%;
+					span.read-more {
+						border: 1px solid transparent;
+						color: transparent;
+						padding: 8px 16px;
+						text-decoration: none;
+						transform: scale(0.7);
+						transition: 0.6s ease all;
+					}
+				}
+				&:hover {
+					text-decoration: none;
+					.tag-item__image-inner {
+						background-color: rgba($brand-primary, 0.5);
+						span.read-more {
+							border: 1px solid $white;
+							color: $white;
+							transform: scale(1);
+							text-decoration: none;
+						}
+					}
+				}
+			}
+		}
+		&__header {
+			h3 {
+				@include rem(font-size, 20);
+				line-height: 1.2em;
+				a {
+					transition: 0.3s ease all;
+					&:hover {
+						color: darken($brand-primary, 20%);
+						text-decoration: none;
+					}
+				}
+			}
+			&-info {
+				border-top: 1px solid lighten($brand-primary, 40%);
+				border-bottom: 1px solid lighten($brand-primary, 40%);
+				color: $background-light;
+				@include rem(font-size, 12);
+				line-height: 1;
+				margin-top: 0.1em;
+				margin-bottom: 0.5em;
+				padding-top: 0.4em;
+				padding-bottom: 0.2em;
+				text-transform: uppercase;
+			}
+		}
+		&__intro {
+			h2 {
+				@include rem(font-size, 22);
+				color: $brand-primary;
+			}
+			h3 {
+				@include rem(font-size, 18);
+				color: $brand-secondary;
+			}
+		}
+		&__actions {
+			&-tags {
+				@include rem(font-size, 13);
+				span {
+					white-space: nowrap;
+					a {
+						color: $background-light;
+						transition: 0.3s ease all;
+						&:hover {
+							color: $brand-secondary;
+							text-decoration: none;
+						}
+					}
+				}
+			}
+		}
+	}
+}

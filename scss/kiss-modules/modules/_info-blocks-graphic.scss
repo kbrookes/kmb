@@ -1,0 +1,54 @@
+//// INFO BLOCK PITCH MODULE
+/// For a row of info blocks. 
+/// Requires info-block.php mod_custom, info-block module position in the index.php
+/// Use with ModuleStyle None
+
+.info-block-graphic {
+	padding-top: $padding-v-m;
+	padding-bottom: $padding-v-m;
+	h3 {
+		font-weight: 300;
+		margin: 1rem 0;
+	}
+	.btn {
+		align-self: center;
+	}
+}
+/// PER-TEMPLATE CUSTOMISATIONS
+// Adjust these for styles that might be different from site to site
+.info-block-graphic {
+	h3 {
+		font-weight: 300;
+	}
+	&__inner {
+		&-image {
+			img {
+				width: 100%;
+			}
+		}
+	}
+}
+
+.itemid-130,
+.itemid-156,
+.itemid-131,
+ .category-9 { /// SERVICES PAGE
+	.below {
+		background-color: $brand-primary;
+		color: $white;
+		padding-bottom: $padding-v-m;
+		padding-top: $padding-v-m;
+		.support-block {
+			&__contact {
+				text-align: center;
+				p:first-child {
+					@include rem(font-size, 40);
+				}
+				h3 {
+					@include rem(font-size, 18);
+					margin: 0 0 1em;
+				}
+			}
+		}
+	}
+}

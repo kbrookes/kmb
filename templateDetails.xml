@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/2.5/template-install.dtd">
+<extension version="3.1" type="template" client="site" method="upgrade">
+    <name>Kiss My Template</name>
+    <version>1.10</version>
+    <creationDate>May 2018</creationDate>
+    <author>kissmybusiness.com</author>
+    <authorEmail>kelsey@kissmybusiness.com</authorEmail>
+    <copyright>Copyright (C) 2018 Kiss Nt Business. All rights reserved.</copyright>
+    <description>TPL_KISSMYB_XML_DESCRIPTION</description>
+    <files>
+        <filename>component.php</filename>
+        <filename>error.php</filename>
+        <filename>favicon.ico</filename>
+        <filename>index.php</filename>
+        <filename>templateDetails.xml</filename>
+        <filename>template_preview.png</filename>
+        <filename>template_thumbnail.png</filename>
+        <folder>css</folder>
+        <folder>fonts</folder>
+        <folder>html</folder>
+        <folder>images</folder>
+        <folder>js</folder>
+        <folder>language</folder>
+    </files>
+    <positions>
+        <position>banner</position>
+        <position>debug</position>
+        <position>breadcrumbs</position>
+        <position>hero-header</position>
+        <position>elevator</position>
+        <position>info-block</position>
+        <position>above</position>
+        <position>above-no-wrap</position>
+        <position>above-content</position>
+        <position>below-content</position>
+        <position>below-no-wrap</position>
+        <position>below</position>
+        <position>sidebar-left</position>
+        <position>sidebar-right</position>
+        <position>navbar-1</position>
+        <position>navbar-2</position>
+        <position>above-footer</position>
+		<position>footer-nav</position>
+		<position>footer-policies</position>
+        <position>footer</position>
+    </positions>
+    <languages folder="language">
+        <language tag="en-GB">en-GB/en-GB.tpl_kissmybusiness.ini</language>
+        <language tag="en-GB">en-GB/en-GB.tpl_kissmybusiness.sys.ini</language>
+    </languages>
+    <config>
+        <fields name="params">
+            <fieldset name="advanced">
+            	<!-- SASS-->
+				<field name="compile_sass" type="radio" class="btn-group" default="0" label="Compile Sass" description="Do you want to enable Sass compilation)">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="logoalt"  type="text" default=""
+					label="Logo Title"
+					description="SVG LOGO TITLE"
+					filter="string" />
+				<field name="logodesc"  type="text" default=""
+					label="Logo Description"
+					description="SVG LOGO Description"
+					filter="string" />
+                <field name="abninfo"  type="text" default=""
+					label="TPL_KISSMYB_ABN"
+					description="ABN NUMBER"
+					filter="string" />
+                <field name="sitedescription"  type="text" default=""
+					label="JGLOBAL_DESCRIPTION"
+					description="JGLOBAL_SUBHEADING_DESC"
+					filter="string" />
+                <field name="favicon" class="" type="text" default="/templates/bootstrap4/favicon.ico"
+					label="TPL_KISSMYB_FAVICON"
+					description="TPL_KISSMYB_FAVICON_DESC" />
+		<field name="fluidContainer"
+					type="radio"
+					label="TPL_KISSMYB_FLUID_LABEL"
+					description="TPL_KISSMYB_FLUID_DESC"
+					class="btn-group btn-group-yesno"
+					default="0"
+					>
+					<option value="1">TPL_KISSMYB_FLUID</option>
+					<option value="0">TPL_KISSMYB_STATIC</option>
+				</field>
+				<field name="primarycolor"
+					type="color"
+					default=""
+					label="Primary Color"
+					description="Change the primary color if needed" />
+				<field name="secondarycolor"
+					type="color"
+					default=""
+					label="Secondary Color"
+					description="Change the secondary color if needed" />
+				<field name="backgrounddark"
+					type="color"
+					default=""
+					label="Background Dark"
+					description="Change the dark background color if needed" />
+				<field name="backgroundlight"
+					type="color"
+					default=""
+					label="Background Light"
+					description="Change the light background color if needed" />
+				<field name="alternate"
+					type="color"
+					default=""
+					label="Alternate"
+					description="Change the alternate color if needed" />
+				<field name="brandred"
+					type="color"
+					default=""
+					label="Red"
+					description="Change the brand red if needed" />
+				<field name="brandgreen"
+					type="color"
+					default=""
+					label="Green"
+					description="Change the brand green if needed" />
+            </fieldset>
+        </fields>
+    </config>
+</extension>

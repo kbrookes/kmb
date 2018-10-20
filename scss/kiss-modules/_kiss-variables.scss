@@ -1,0 +1,205 @@
+
+//// FONTS
+$heading-font: 'Barlow', sans-serif;
+$body-font: 'Barlow', sans-serif;
+$body-font-weight: 400;
+
+h1 {
+	font-family: $heading-font;
+	@include rem(font-size, 48);
+	@include media-breakpoint-down(xl) {
+		@include rem(font-size, 48);	
+	}
+	@include media-breakpoint-down(lg) {
+		@include rem(font-size, 42);	
+	}
+	@include media-breakpoint-down(md) {
+		@include rem(font-size, 38);	
+	}
+	@include media-breakpoint-down(sm) {
+		@include rem(font-size, 36);	
+	}
+	@include media-breakpoint-down(xs) {
+		@include rem(font-size, 32);	
+	}
+}
+
+h2 {
+	font-family: $heading-font;
+	@include rem(font-size, 32);
+	@include media-breakpoint-down(xl) {
+		@include rem(font-size, 32);	
+	}
+	@include media-breakpoint-down(md) {
+		@include rem(font-size, 29);	
+	}
+	@include media-breakpoint-down(xs) {
+		@include rem(font-size, 26);	
+	}
+}
+
+h3 {
+	font-family: $heading-font;
+	@include rem(font-size, 28);
+	@include media-breakpoint-down(xl) {
+		@include rem(font-size, 28);	
+	}
+	@include media-breakpoint-down(md) {
+		@include rem(font-size, 26);	
+	}
+	@include media-breakpoint-down(xs) {
+		@include rem(font-size, 22);	
+	}
+}
+
+h4 {
+	color: $brand-primary;
+	font-family: $heading-font;
+	@include rem(font-size, 24);
+	font-weight: 300;
+	@include media-breakpoint-down(xl) {
+		@include rem(font-size, 24);	
+	}
+	@include media-breakpoint-down(md) {
+		@include rem(font-size, 22);	
+	}
+	@include media-breakpoint-down(xs) {
+		@include rem(font-size, 20);	
+	}
+}
+
+h5 {
+	font-family: $heading-font;
+	@include rem(font-size, 20);
+	@include media-breakpoint-down(xl) {
+		@include rem(font-size, 20);	
+	}
+	@include media-breakpoint-down(sm) {
+		@include rem(font-size, 18);	
+	}
+}
+
+h6 {
+	font-family: $heading-font;
+	@include rem(font-size, 18);
+}
+
+p,
+li {
+	font-family:$body-font;
+	font-weight: $body-font-weight;
+}
+
+// White links against the brand-primary background
+$navbar-primary-color: $white;
+$navbar-primary-active-color: $brand-secondary;
+$navbar-primary-hover-color: $brand-secondary;
+$navbar-primary-disabled-color: $background-light;
+$navbar-primary-toggler-border-color: $white;
+$navbar-primary-toggler-icon-bg: str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{$navbar-dark-color}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"), "#", "%23") !default;
+$navbar-primary-scrolled-toggler-icon-bg: str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{$brand-secondary}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"), "#", "%23") !default;
+
+.navbar-primary {
+  .navbar-brand {
+    color: $navbar-primary-active-color;
+
+    @include hover-focus {
+      color: $navbar-primary-active-color;
+    }
+  }
+
+  .navbar-nav {
+    .nav-link {
+      color: $navbar-primary-color;
+
+      @include hover-focus {
+        color: $navbar-primary-hover-color;
+      }
+
+      &.disabled {
+        color: $navbar-primary-disabled-color;
+      }
+    }
+
+    .show > .nav-link,
+    .active > .nav-link,
+    .nav-link.show,
+    .nav-link.active {
+      color: $navbar-primary-active-color;
+    }
+  }
+
+  .navbar-toggler {
+    color: $navbar-primary-color;
+    border-color: $navbar-primary-toggler-border-color;
+  }
+
+  .navbar-toggler-icon {
+    background-image: $navbar-primary-toggler-icon-bg;
+  }
+
+  .navbar-text {
+    color: $navbar-primary-color;
+    a {
+      color: $navbar-primary-active-color;
+
+      @include hover-focus {
+        color: $navbar-primary-active-color;
+      }
+    }
+  }
+}
+
+//// HEADER HEIGHT - Control the height of the header and padding
+/// CHANGE ON PER PROJECT BASIS
+
+$header-xs: 65px;
+$header-sm: 89px;
+$header-md: 89px;
+$header-lg: 89px;
+$header-xl: 89px;
+$header-xxl: 89px;
+
+
+//// MODALS
+.modal {
+	&-content {
+		background-color: rgba($background-dark, 0.9);
+		border: none;
+		border-radius: 3px
+	}
+	&-header {
+		border-bottom: none;
+		padding: 0.5em;
+		h5 {
+			color: $white;
+			text-transform: uppercase;
+		}
+		.close {
+			color: $white;
+			text-shadow: none;
+		}
+	}
+	&-body {
+		padding: 0.5em;
+	}
+}
+
+
+/// SYSTEM WIDE PADDING
+
+$padding-v-s: 30px;
+$padding-v-m: 60px;
+$padding-v-l: 120px;
+
+/// ADDITIONAL CONTAINER SIZES
+.container-sm {
+	max-width: 768px;
+	@include make-container();
+}
+.container-md {
+	max-width: 992px;
+	@include make-container();
+}
+
+

@@ -1,0 +1,31 @@
+//// TESTIMONIALS MODULE
+// REQUIRES MOD_K2_CONTENT TESTIMONIALS OVERRIDE
+// WORKS WITH TESTIMONIALS CAROUSEL & STATIC TESTIMONIALS
+
+.testimonials {
+	&-carousel {
+		padding: $padding-v-m 0;
+		blockquote {
+			p {
+				color: $brand-primary;
+				font-family: $heading-font;
+				@include rem(font-size, 32);
+				line-height: 1.2em;
+			}
+			span {
+				padding-right: 15px;
+				margin-top: 4px;
+			}
+			i.fa {
+				color: $brand-primary;
+				@include rem(font-size, 73);
+			}
+			footer cite {
+				color: $background-dark;
+				font-weight: 600;
+				font-style: normal;
+				text-transform: uppercase;
+			}
+		}
+	}
+}

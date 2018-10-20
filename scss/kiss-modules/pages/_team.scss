@@ -1,0 +1,104 @@
+///// STYLES FOR TEAM PAGES
+/// For use with the com_k2 team override code
+/// Uses categories to display subcategories of teams - hasn't been tested with flat heirarchies,
+/// so should probably be extended at some point.
+
+.team-page {
+	padding-bottom: $padding-v-m;
+	&__categories {
+		
+	}
+	&__item {
+		&-title {
+			margin-bottom: 5px;
+			&_mobile {
+				@include media-breakpoint-up(xs) {
+					display: none;
+				}
+				@include media-breakpoint-down(xs) {
+					display: block;
+				}
+			}
+			&_notMobile {
+				@include media-breakpoint-down(xs) {
+					display: none;
+				}
+			}
+			&_role {
+				color: $background-light;
+				border-bottom: 1px solid $brand-secondary;
+				@include rem(font-size, 14);
+				text-transform: uppercase;
+			}
+		}
+		&-actions {
+			display: flex;
+			justify-content: start;
+			margin-bottom: $padding-v-s;
+			span {
+				margin-right: 15px;
+			}
+			i {
+				color: $brand-primary;
+			}
+			&_linkedin {
+				align-self: flex-end;
+			}
+		}
+		&-info {	
+		}
+	}
+}
+
+
+
+/// PER-TEMPLATE CUSTOMISATIONS
+// Adjust these for styles that might be different from site to site
+.team-page {
+	&__categories {
+		&-subcat {
+			&_item {
+				margin-bottom: 30px;
+				&-image {
+					border: 5px solid $brand-primary;
+					margin-bottom: 15px;
+				}
+				&-title {
+					h3 {
+						color: $brand-primary;
+						font-weight: 300;
+						@include rem(font-size, 20);
+						margin: 0 0 0.2em;	
+					}
+					
+				}
+				&-content {
+					h4 {
+						color: $background-light;
+						@include rem(font-size, 14);
+						margin: 0 0 0.5em;
+						//text-align: center;
+						text-transform: uppercase;
+					}
+				}
+			}
+		}	
+	}
+	&__item {
+		&-image {
+			&_wrap {
+				border: 5px solid $brand-primary;
+				margin-bottom: 15px;
+			}
+		}	
+		&-title {
+			h2 {
+				color: $brand-primary;
+				font-weight: 800;
+			}
+		}
+		&-info {
+			margin-bottom: 15px;
+		}
+	}
+}
